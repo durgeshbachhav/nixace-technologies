@@ -78,8 +78,11 @@
     </header>
 
     <!-- Start block -->
-    <section class="bg-white dark:bg-gray-900">
-        <div class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28">
+    <section class="pt-10 bg-white dark:bg-gray-900">
+        <div class="grid max-w-screen-xl px-4 pt-20  pb-8 mx-auto lg:gap-8 xl:gap-4 lg:py-16 lg:grid-cols-12 lg:pt-28">
+            <div class=" lg:mt-0 lg:col-span-5 lg:flex">
+                <img src="./images/hero.png" alt="hero image">
+            </div>  
             <div class="mr-auto place-self-center lg:col-span-7">
                 <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white">Master DevOps and Transform Your Software Industry.</h1>
                 <p class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Unlock the Power of DevOps with Our Comprehensive Training Program.</p>
@@ -87,38 +90,36 @@
                     <a href="" class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-gray-900 border border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                         <i class="fa-solid fa-cloud px-2"></i> Explore Courses
                     </a> 
-                    <a href="" class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                    <a href="#about" id="about" class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
                         <i class="fa-solid fa-eject px-2"></i> About Us
                     </a>
                 </div>
             </div>
-            <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                <img src="./images/hero.png" alt="hero image">
-            </div>                
+                          
         </div>
     </section>
     <!-- End block -->
     <!-- Start block -->
     <section class="bg-white dark:bg-gray-900">
         <div class="max-w-screen-xl px-4 pb-8 mx-auto lg:pb-16">
-            <div class="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 sm:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
-                <a href="#" class="flex items-center lg:justify-center">
+            <div class="grid grid-cols-2 gap-8 content-center text-gray-500 sm:gap-12 sm:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
+                <a href="#" class="flex items-center justify-center ">
                     <i   class="fa-brands fa-git-alt fa-4x"></i>                       
                 </a>
-                <a href="#" class="flex items-center lg:justify-center">
+                <a href="#" class="flex items-center justify-center ">
                     <i class="fa-brands fa-docker fa-4x"></i>                                              
                 </a>
-                <a href="#" class="flex items-center lg:justify-center">
+                <a href="#" class="flex items-center justify-center">
                     <i class="fa-brands fa-jenkins fa-4x"></i>                                                               
                 </a>
     
-                <a href="#" class="flex items-center lg:justify-center">
+                <a href="#" class="flex items-center justify-center">
                     <i class="fa-solid fa-cloud-arrow-up fa-4x"></i>                                                                                  
                 </a>
-                <a href="#" class="flex items-center lg:justify-center">
+                <a href="#" class="flex items-center justify-center">
                     <i class="fa-brands fa-aws fa-4x"></i>                                                                                 
                 </a>
-                <a href="#" class="flex items-center lg:justify-center">
+                <a href="#" class="flex items-center justify-center">
                     <i class="fa-brands fa-linux fa-4x"></i>                                                                                 
                 </a>
             </div>
@@ -249,8 +250,8 @@
             <div class="container mx-auto  py-8">
                 <h1 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">Learning Path</h1>
                 <hr class="border my-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                  <div class="flex flex-col      text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                <div class="grid grid-cols-1 px-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  <div class="flex flex-col  p-6   text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
                     <h2 class="mb-4 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Configuration Management with Ansible and Terraform</h2>
                     <ul class="list-disc pl-4 max-w-2xl  font-light text-gray-500  text-xs dark:text-gray-400">
                       <li>Explore Configuration Management principles</li>
@@ -270,7 +271,7 @@
                     </ul>
                   </div>
               
-                  <div class="flex flex-col   p-6   text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                  <div class="flex flex-col   p-6  md:p-0 text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
                     <h2 class="mb-4 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Container Orchestration using Kubernetes</h2>
                     <ul class="list-disc pl-4 max-w-2xl  font-light text-gray-500  text-xs dark:text-gray-400">
                       <li>Gain insights into Kubernetes architecture and components</li>
@@ -294,32 +295,158 @@
         </div>
     </section>
     <!-- learning path section end -->
-   
+   <!-- second learing path start -->
+  
+    <!-- <section>
+        <div class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6">
+            <div class="container space-y-6 px-4 md:px-6">
+              <div class="space-y-2">
+                <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Learning Path</h2>
+               
+              </div>
+              <div class="space-y-4 mt-4">
+                <div class="space-y-2">
+                  <h3 class="font-bold">Module 1: Configuration Management with Ansible and Terraform</h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">weak 1 - weak 2</p>
+                </div>
+                <ul class="space-y-4 list-inside list-disc">
+                    <li>Explore Configuration Management principles</li>
+                    <li>Understand Infrastructure as Code (IaC) with Ansible and Terraform</li>
+                    <li>Master Ansible configuration and playbook development</li>
+                    <li>Learn Terraform scripting and infrastructure provisioning</li>
+                </ul>
+              </div>
+              <div class="space-y-4 mt-4">
+                <div class="space-y-2">
+                  <h3 class="font-bold">Module 2: Docker Certified Associate Certification Training</h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">October 5 - October 19</p>
+                </div>
+                <ul class="space-y-4 list-inside list-disc">
+                    <li>Introduction to Docker and containerization</li>
+                    <li>Image creation, management, and registry</li>
+                    <li>Container orchestration with Docker Compose and Kubernetes</li>
+                    <li>Dive into Docker security, volumes, and networking</li>
+                </ul>
+              </div>
+              <div class="space-y-4 mt-4">
+                <div class="space-y-2">
+                  <h3 class="font-bold">Module 3: Container Orchestration using Kubernetes</h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">October 26 - November 9</p>
+                </div>
+                <ul class="space-y-4 list-inside list-disc">
+                    <li>Gain insights into Kubernetes architecture and components</li>
+                    <li>Explore Kubernetes networking, services, and load balancing</li>
+                    <li>Understand storage and workload management in Kubernetes</li>
+                    <li>Learn troubleshooting techniques and backup strategies</li>
+                </ul>
+              </div>
+              <div class="space-y-4 mt-4">
+                <div class="space-y-2">
+                  <h3 class="font-bold">Module 4: DevOps Capstone Project</h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">November 16 - November 30</p>
+                </div>
+                <ul class="space-y-4 list-inside list-disc">
+                    <li>Apply your skills to real-world scenarios through hands-on capstone projects</li>
+                    <li>Solve industry-oriented problem statements</li>
+                    <li>Showcase your learnings to employers, strengthening your professional network</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </section> -->
+   <!-- second learning path end -->
+
+
+
+
+
     <!-- tool section start -->
-    <section class="bg-gray-100 dark:bg-gray-900">
-        <div class="max-w-screen-xl px-4  mx-auto py-8">
-            <div class="grid grid-cols-2 gap-8 text-gray-500 sm:gap-12 sm:grid-cols-3 lg:grid-cols-6 dark:text-gray-400">
-                <a href="#" class="flex items-center lg:justify-center">
-                    <i   class="fa-brands fa-git-alt fa-4x"></i>                       
-                </a>
-                <a href="#" class="flex items-center lg:justify-center">
-                    <i class="fa-brands fa-docker fa-4x"></i>                                              
-                </a>
-                <a href="#" class="flex items-center lg:justify-center">
-                    <i class="fa-brands fa-jenkins fa-4x"></i>                                                               
+    <section class="bg-gray-100 dark:bg-gray-900 mb-4">
+        
+        <div class=" px-4  py-10 mx-auto lg:pb-16 mb-4">
+            <h2 class="mb-4  text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center py-8">Tools And Platforms</h2>
+            <div class="  grid  grid-cols-2 gap-8  md:grid-cols-4 lg:grid-cols-6 py-8" >
+                
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/aw1.png" class="w-20 " alt="">                                                              
                 </a>
     
-                <a href="#" class="flex items-center lg:justify-center">
-                    <i class="fa-solid fa-cloud-arrow-up fa-4x"></i>                                                                                  
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/aw2.png" class="w-20 " alt="">                                                                                   
                 </a>
-                <a href="#" class="flex items-center lg:justify-center">
-                    <i class="fa-brands fa-aws fa-4x"></i>                                                                                 
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/aw3.png" class="w-20 " alt="">                                                                                  
                 </a>
-                <a href="#" class="flex items-center lg:justify-center">
-                    <i class="fa-brands fa-linux fa-4x"></i>                                                                                 
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/aw4.png" class="w-20 " alt="">                                                                                  
                 </a>
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/aw5.png" class="w-20 " alt="">                                                                                  
+                </a>
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/aw6.png" class="w-20 " alt="">                                                                                  
+                </a>
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/aw7.png" class="w-20 " alt="">                                                                                  
+                </a>
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/aw8.png" class="w-20 " alt="">                                                                                  
+                </a>
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/aws.webp" class="w-20 " alt="">                                                                                  
+                </a>
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/azure.png" class="w-20 " alt="">                                                                                  
+                </a>
+                
+                
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/adev.png" class="w-20 " alt="">                                                                                  
+                </a>
+                
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/git.webp"  class="w-20 " alt="">                                                                                  
+                </a>
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/githubgl.png" class="w-20 " alt="">                                                                                  
+                </a>
+                
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/linux.webp"  class="w-20 " alt="">                                                                                  
+                </a>
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/kubernetes.webp" class="w-20 " alt="">                                                                                  
+                </a>
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/nexus.png" class="w-20 " alt="">                                                                                  
+                </a>
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/seleniu.png"  class="w-20 " alt="">                                                                                  
+                </a>
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/slack.webp"  class="w-20 " alt="">                                                                                  
+                </a>
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/terraform.png"  class="w-20 " alt="">                                                                                  
+                </a>
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/trello.webp" class="w-20 " alt="">                                                                                  
+                </a>
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/docker.webp" class="w-20 " alt="">                                                                                  
+                </a>
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/ansible.webp"
+                    class="w-20 " alt="">                                                                                  
+                </a>
+                <a href="#" class="flex items-center justify-center  w-full h-full lg:p-2">
+                    <img src="./images/jenkins.webp" 
+                    class="w-20 h-20 ">                                                                                  
+                </a>
+                
             </div>
         </div>
+        
     </section>
     <!-- tool section end -->
     <!-- Start block -->
@@ -497,7 +624,7 @@
     <!-- End block -->
    
 
-<footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+<footer id="#About" class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="flex items-center justify-between flex-col lg:flex-row w-full">
             <a href="" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
