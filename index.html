@@ -131,16 +131,20 @@
         </div>
       </nav>
     </header>
-    <!-- <section class="fixed bottom-10 left-10 ">
-      <div onclick="togglePopup()">Enquire Now!</div>
-    </section> -->
+    <section class="fixed bottom-2 right-2">
+      <a
+        class="inline-flex cursor-pointer items-center justify-center w-full px-5 py-3 text-sm font-medium text-center bg-purple-600 text-black border border-gray-200 rounded-lg sm:w-auto hover:bg-purple-900 transition ease-in hover:text-white focus:ring-4 focus:ring-gray-100"
+        onclick="togglePopup()"
+        >Enquire Now!</a
+      >
+    </section>
     <!-- Start block -->
     <section class="bg-white">
       <div
-        class="max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 flex flex-col lg:flex lg:flex-row-reverse"
+        class="max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 flex flex-col lg:flex lg:flex-row"
       >
         <div class="lg:mt-0 md:w-1/2 lg:flex">
-          <img src="./images/hero1.png" alt="hero image" />
+          <img src="./images/hero2.png" class="" alt="hero image" />
         </div>
         <div
           class="mr-auto place-self-center md:w-1/2 flex items-center justify-center flex-col text-black"
@@ -249,7 +253,7 @@
 
     <section class="w-full max-w-screen-xl mx-auto px-5">
       <div class="w-full px-8">
-        <div class="py-8 ">
+        <div class="py-8">
           <h1
             class="mb-4 text-3xl text-center font-bold tracking-tight text-gray-900"
           >
@@ -931,7 +935,7 @@
             <div>
               <a
                 href="#"
-                class="inline-flex items-center justify-center w-full px-5 py-3 text-xl font-med tracking-wider text-white border border-gray-200 rounded-lg sm:w-auto bg-purple-700 focus:ring-4"
+                class="inline-flex items-center justify-center w-full px-5 py-3 text-xl font-med tracking-wider text-white border border-gray-200 rounded-lg sm:w-auto bg-gray-500 focus:ring-4"
               >
                 Download our Free DevOps Course Brochure
               </a>
@@ -988,20 +992,7 @@
             Submit
           </div>
         </div>
-        <div
-          class="w-full flex flex-col items-center justify-center aspect-w-16 aspect-h-9 md:p-4 lg:p-2 rounded-lg"
-        >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d617.0004682837165!2d72.84605369456297!3d19.12024682201002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c3af2a2d13%3A0x33b8b5ef97e58161!2sPearl%20plaza!5e0!3m2!1sen!2sin!4v1712996868264!5m2!1sen!2sin"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            width=""
-            height=""
-            class="w-full h-full md:p-2 lg:p-4 rounded-lg"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+        
       </div>
     </section>
 
@@ -1058,8 +1049,8 @@
         </div>
       </div>
     </footer>
-    <!-- <div
-      class="fixed w-64 mx-auto inset-0 flex items-center justify-center  bg-opacity-50"
+    <div
+      class="fixed w-64 mx-auto inset-0 flex items-center justify-center bg-opacity-50"
       id="popup"
     >
       <div
@@ -1103,14 +1094,14 @@
           Submit
         </div>
       </div>
-    </div> -->
+    </div>
 
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
     <script>
-      // function togglePopup() {
-      //   var popup = document.getElementById("popup");
-      //   popup.classList.toggle("hidden");
-      // }
+      function togglePopup() {
+        var popup = document.getElementById("popup");
+        popup.classList.toggle("hidden");
+      }
     </script>
   </body>
 </html>
