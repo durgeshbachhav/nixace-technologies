@@ -36,6 +36,21 @@
       src="https://kit.fontawesome.com/c771fd62ca.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      #popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999; /* Ensure the popup appears above other content */
+      }
+
+      /* Styles for the popup content */
+      .popup-content {
+        width: 300px;
+      }
+    </style>
   </head>
   <body>
     <header class="fixed w-full">
@@ -122,7 +137,7 @@
           </div> -->
           <div>
             <a
-              href="#About"
+              onclick="togglePopup()"
               class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center bg-purple-600 text-black border border-gray-200 rounded-lg sm:w-auto hover:bg-purple-900 transition ease-in hover:text-white focus:ring-4 focus:ring-gray-100"
             >
               Enquire Now! <i class="fa-solid fa-right-to-bracket px-2"></i>
@@ -131,7 +146,7 @@
         </div>
       </nav>
     </header>
-    <section class="fixed bottom-2 right-2">
+    <section class="fixed bottom-2 right-2 md:hidden lg:hidden">
       <a
         class="inline-flex cursor-pointer items-center justify-center w-full px-5 py-3 text-sm font-medium text-center bg-purple-600 text-black border border-gray-200 rounded-lg sm:w-auto hover:bg-purple-900 transition ease-in hover:text-white focus:ring-4 focus:ring-gray-100"
         onclick="togglePopup()"
@@ -164,12 +179,14 @@
             class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4 items-center justify-center"
           >
             <a
-              href="#About"
+              onclick="togglePopup()"
               class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center bg-purple-600 text-black border border-gray-200 rounded-lg sm:w-auto hover:bg-purple-900 transition ease-in hover:text-white focus:ring-4 focus:ring-gray-100"
             >
               Enquire Now! <i class="fa-solid fa-right-to-bracket px-2"></i>
             </a>
             <a
+              id="know_more_button"
+              onclick="scrollToWhy()"
               class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg sm:w-auto focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 cursor-pointer"
             >
               Know More <i class="fa-solid fa-eject px-2"></i>
@@ -205,7 +222,7 @@
             </p>
             <a
               class="font-bold text-2xl tracking-wider text-white px-8 hover:text-white bg-purple-700 py-2 rounded-lg"
-              href="#About"
+              onclick="togglePopup()"
             >
               Enroll Today!
             </a>
@@ -257,7 +274,7 @@
           <h1
             class="mb-4 text-3xl text-center font-bold tracking-tight text-gray-900"
           >
-            Benefits of Taking Our DevOps Training Course
+            Benefits of Doing Our DevOps Training Course
           </h1>
         </div>
         <div
@@ -340,7 +357,7 @@
     <!-- benefit of this course end -->
 
     <!-- why we choose section start-->
-    <section class=" ">
+    <section id="why_section" class=" ">
       <div
         class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-16 lg:px-6"
       >
@@ -520,8 +537,8 @@
       </div>
 
       <a
+        onclick="togglePopup()"
         class="font-bold text-2xl tracking-wider text-white px-8 hover:text-white bg-purple-700 py-2 mt-5 rounded-lg"
-        href="#About"
       >
         Enquire Now !
       </a>
@@ -925,8 +942,8 @@
           >
             <div>
               <a
-                class="font-bold text-xl tracking-wider text-white px-8 hover:text-white bg-purple-700 py-2 mt-5 rounded-lg"
-                href="#About"
+                class="font-bold cursor-pointer text-xl tracking-wider text-white px-8 hover:text-white bg-purple-700 py-2 mt-5 rounded-lg"
+                onclick="togglePopup()"
               >
                 Enquire Now !
               </a>
@@ -958,7 +975,7 @@
         Enquire Now!
       </h2>
       <div
-        class="max-w-screen-xl px-4 mx-auto lg:px-6 grid grid-cols-1 md:grid-cols-2 gap-8"
+        class="max-w-80 px-4 mx-auto lg:px-6  gap-8"
       >
         <div
           class="w-full flex flex-col items-start justify-start bg-gray-200 p-6 rounded-lg"
@@ -975,7 +992,7 @@
             type="email"
             id="email"
             aria-describedby="helper-text-explanation"
-            class="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            class="mt-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Email"
           />
 
@@ -983,16 +1000,15 @@
             type="text"
             id="Name"
             aria-describedby="helper-text-explanation"
-            class="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            class="mt-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Mobile Number"
           />
           <div
-            class="mt-2 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800 lg:mb-0"
+            class="mt-4    text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800 lg:mb-0"
           >
             Submit
           </div>
         </div>
-        
       </div>
     </section>
 
@@ -1049,49 +1065,48 @@
         </div>
       </div>
     </footer>
-    <div
-      class="fixed w-64 mx-auto inset-0 flex items-center justify-center bg-opacity-50"
-      id="popup"
-    >
-      <div
-        class="w-full flex flex-col items-start justify-start bg-gray-200 p-6 rounded-lg"
-      >
-        <div class="flex items-center justify-between w-full py-2">
-          <h2 class="font-bold">Enquire Now!</h2>
-          <div
-            onclick="togglePopup()"
-            class="bg-gray-900 p-1 rounded-lg cursor-pointer"
-          >
-            <i class="fa-solid text-white fa-xmark fa-xl"></i>
-          </div>
-        </div>
-        <input
-          type="text"
-          id="Name"
-          aria-describedby="helper-text-explanation"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="Full Name"
-        />
-
-        <input
-          type="email"
-          id="email"
-          aria-describedby="helper-text-explanation"
-          class="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="Email"
-        />
-
-        <input
-          type="text"
-          id="Name"
-          aria-describedby="helper-text-explanation"
-          class="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="Mobile Number"
-        />
+    <div id="popup" class="">
+      <div class="popup-content">
         <div
-          class="mt-2 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800 lg:mb-0"
+          class="w-full flex flex-col items-center justify-center bg-gray-200 p-6 rounded-lg"
         >
-          Submit
+          <div class="flex items-center justify-between w-full py-2">
+            <h2 class="font-bold">Enquire Now!</h2>
+            <div
+              onclick="togglePopup()"
+              class="bg-gray-900 p-1 rounded-lg cursor-pointer"
+            >
+              <i class="fa-solid text-white fa-xmark fa-xl"></i>
+            </div>
+          </div>
+          <input
+            type="text"
+            id="Name"
+            aria-describedby="helper-text-explanation"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Full Name"
+          />
+
+          <input
+            type="email"
+            id="email"
+            aria-describedby="helper-text-explanation"
+            class="mt-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Email"
+          />
+
+          <input
+            type="text"
+            id="Name"
+            aria-describedby="helper-text-explanation"
+            class="mt-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Mobile Number"
+          />
+          <div
+            class="mt-4 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800 lg:mb-0"
+          >
+            Submit
+          </div>
         </div>
       </div>
     </div>
@@ -1100,7 +1115,17 @@
     <script>
       function togglePopup() {
         var popup = document.getElementById("popup");
-        popup.classList.toggle("hidden");
+        if (popup.style.display === "none") {
+          popup.style.display = "block"; // Show the popup
+        } else {
+          popup.style.display = "none"; // Hide the popup
+        }
+        ("popup");
+        popup.classList.add("hidden");
+      }
+      function scrollToWhy() {
+        var whySection = document.getElementById("why_section");
+        whySection.scrollIntoView({ behavior: "smooth" });
       }
     </script>
   </body>
