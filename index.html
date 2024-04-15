@@ -29,6 +29,7 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <link href="./output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <script
       defer
@@ -38,18 +39,14 @@
   </head>
   <body>
     <header class="fixed w-full">
-      <nav class="bg-gray-100 border-gray-200 dark:bg-gray-900">
+      <nav class="bg-gray-100 rounded-b-lg border-gray-200 dark:bg-gray-900">
         <div
           class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto"
         >
           <a href="#" class="flex items-center">
-            <img
-              src="./images/logo.svg"
-              class="w-24 h-24 mr-3"
-              alt="Landwind Logo"
-            />
+            <img src="./images/logo.svg" class="w-24 h-24 mr-3" alt=" Logo" />
           </a>
-          <div class="flex items-center lg:order-2">
+          <!-- <div class="flex items-center lg:order-2">
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
@@ -82,9 +79,9 @@
                 ></path>
               </svg>
             </button>
-          </div>
+          </div> -->
           <!-- navlink -->
-          <div
+          <!-- <div
             class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1"
             id="mobile-menu-2"
           >
@@ -122,37 +119,49 @@
                 >
               </li>
             </ul>
+          </div> -->
+          <div>
+            <a
+              href="#About"
+              class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-gray-900 border border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+            >
+              Enquire Now! <i class="fa-solid fa-right-to-bracket px-2"></i>
+            </a>
           </div>
         </div>
       </nav>
     </header>
-
+    <!-- <section class="fixed bottom-10 left-10 ">
+      <div onclick="togglePopup()">Enquire Now!</div>
+    </section> -->
     <!-- Start block -->
-    <section class="pt-10 bg-white dark:bg-gray-900">
+    <section class="bg-white">
       <div
-        class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-4 lg:py-16 lg:grid-cols-12 lg:pt-28"
+        class="max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 flex flex-col lg:flex lg:flex-row-reverse"
       >
-        <div class="lg:mt-0 lg:col-span-5 lg:flex">
-          <img src="./images/hero.png" alt="hero image" />
+        <div class="lg:mt-0 md:w-1/2 lg:flex">
+          <img src="./images/hero1.png" alt="hero image" />
         </div>
-        <div class="mr-auto place-self-center lg:col-span-7">
+        <div
+          class="mr-auto place-self-center md:w-1/2 flex items-center justify-center flex-col text-black"
+        >
           <h1
-            class="max-w-2xl text-center md:text-start mb-4 text-4xl font-bold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-white"
+            class="text-black max-w-2xl text-center mb-4 text-3xl font-bold leading-none tracking-tight md:text-5xl xl:text-6xl"
           >
-            DevOps Training Course in Mumbai
+            Future-Proof Your IT Career: Master Cloud & DevOps Skills Today!
           </h1>
+
           <p
-            class="max-w-2xl mb-6 text-center md:text -start font-normal text-gray-500 lg:mb-8 md:text-lg lg:text-xl "
+            class="max-w-2xl mb-6 text-center md:text -start font-normal text-gray-500 lg:mb-8 md:text-lg lg:text-xl"
           >
-            Launch your career in DevOps with Nixace Technologies comprehensive
-            classroom training in Mumbai!
+            Become a High-Demand DevOps Engineer and Land Your Dream Job.
           </p>
           <div
             class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4 items-center justify-center"
           >
             <a
               href="#About"
-              class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-gray-900 border border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+              class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center bg-purple-600 text-black border border-gray-200 rounded-lg sm:w-auto hover:bg-purple-900 transition ease-in hover:text-white focus:ring-4 focus:ring-gray-100"
             >
               Enquire Now! <i class="fa-solid fa-right-to-bracket px-2"></i>
             </a>
@@ -165,9 +174,46 @@
         </div>
       </div>
     </section>
+
     <!-- End block -->
+
+    <!-- feeling stuck section start -->
+
+    <section class="bg-gray-100 py-5 md:py-0 lg:py-0">
+      <div class="max-w-screen-xl px-4 mx-auto lg:py-16 lg:px-6">
+        <!-- Row -->
+        <div class="items-center gap-8 text-center">
+          <div class="text-gray-500 sm:text-lg dark:text-gray-400">
+            <h2 class="mb-4 text-3xl font-bold tracking-tight text-black">
+              Feeling stuck in IT?
+            </h2>
+            <p class="font-normal lg:text-xl">
+              Our immersive 50-day classroom program seamlessly transitions you
+              into high-demand DevOps careers.
+            </p>
+            <p class="mb-8 font-normal lg:text-xl">
+              Master in-demand Cloud & DevOps skills, gain hands-on experience
+              with expert mentorship, and land your dream DevOps job.
+            </p>
+
+            <p class="mb-8 font-normal lg:text-xl">
+              Join Nixace and transform your Career.
+            </p>
+            <a
+              class="font-bold text-2xl tracking-wider text-white px-8 hover:text-white bg-purple-700 py-2 rounded-lg"
+              href="#About"
+            >
+              Enroll Today!
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- feeling stuck section end -->
+
     <!-- Start block -->
-    <section class="bg-gray-100 dark:bg-gray-900 pt-8">
+    <section class="bg-gray-900 pt-8">
       <div class="max-w-screen-xl px-4 pb-8 mx-auto">
         <div
           class="grid grid-cols-2 gap-8 content-center text-gray-500 sm:gap-12 sm:grid-cols-3 lg:grid-cols-6 dark:text-gray-400"
@@ -192,204 +238,301 @@
             <i style="color: orange" class="fa-brands fa-aws fa-4x"></i>
           </a>
           <a href="#" class="flex items-center justify-center">
-            <i style="color: black" class="fa-brands fa-linux fa-4x"></i>
+            <i style="color: white" class="fa-brands fa-linux fa-4x"></i>
           </a>
         </div>
       </div>
     </section>
     <!-- End block -->
+
+    <!-- benefit of this course start -->
+
+    <section class="w-full max-w-screen-xl mx-auto px-5">
+      <div class="w-full px-8">
+        <div class="py-8 px-8">
+          <h1
+            class="mb-4 text-3xl text-center font-bold tracking-tight text-gray-900"
+          >
+            Benefits of Taking Our DevOps Training Course
+          </h1>
+        </div>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 rounded-lg border bg-gray-50"
+        >
+          <div class="p-4 border-b md:border-0 lg:border-0">
+            <div class="flex items-center justify-center flex-col mb-3">
+              <img class="w-24 h-24" src="./images/money-bag.png" alt="" />
+            </div>
+            <div class="flex items-center justify-center flex-col">
+              <h3
+                style="font-size: 18px"
+                class="py-2 font-medium leading-tight text-gray-900"
+              >
+                Increased earning potential
+              </h3>
+              <p class="font-light text-center">
+                DevOps professionals are in high demand and command competitive
+                salaries.
+              </p>
+            </div>
+          </div>
+          <div class="p-4 border-b md:border-0 lg:border-0">
+            <div class="flex items-center justify-center flex-col mb-3">
+              <img class="w-24 h-24" src="./images/growth.png" alt="" />
+            </div>
+            <div class="flex items-center justify-center flex-col">
+              <h3
+                style="font-size: 18px"
+                class="py-2 text-base font-medium leading-tight text-gray-900"
+              >
+                Career advancement
+              </h3>
+              <p class="font-light text-center">
+                Enhance your resume and stand out from the competition.
+              </p>
+            </div>
+          </div>
+          <div class="p-4 border-b md:border-0 lg:border-0">
+            <div class="flex items-center justify-center flex-col mb-3">
+              <img
+                class="w-24 h-24"
+                src="./images/time-management.png"
+                alt=""
+              />
+            </div>
+            <div class="flex items-center justify-center flex-col">
+              <h3
+                style="font-size: 18px"
+                class="py-2 text-base font-medium leading-tight text-gray-900"
+              >
+                Improved productivity
+              </h3>
+              <p class="font-light text-center">
+                Learn how to automate tasks and streamline workflows.
+              </p>
+            </div>
+          </div>
+          <div class="p-4">
+            <div class="flex items-center justify-center flex-col mb-3">
+              <img class="w-24 h-24" src="./images/collaboration.png" alt="" />
+            </div>
+            <div class="flex items-center justify-center flex-col">
+              <h3
+                style="font-size: 18px"
+                class="py-2 text-base font-medium leading-tight text-gray-900"
+              >
+                Enhanced collaboration
+              </h3>
+              <p class="font-light text-center">
+                Develop the skills to work effectively with development and
+                operations teams.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- benefit of this course end -->
+
     <!-- why we choose section start-->
     <section class=" ">
       <div
-        class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-24 lg:px-6"
+        class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:py-16 lg:px-6"
       >
         <!-- Row -->
         <div class="items-center gap-8 text-center">
           <div class="text-gray-500 sm:text-lg dark:text-gray-400">
-            <h2
-              class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
-            >
+            <h2 class="mb-4 text-3xl pb-8 font-bold tracking-tight text-black">
               Why Choose Nixace Technologies for DevOps Training?
             </h2>
-            <p class="mb-8 font-normal lg:text-xl  space-y-5 py-2 ">
-              Master in-demand DevOps skills and become a highly sought-after IT
-              professional. Our course is designed to equip you with the
-              knowledge and practical experience needed to thrive in the
-              exciting world of DevOps.
-            </p>
 
             <div
-              role="list"
-              class="rounded-lg border-gray-200 flex flex-wrap items-center justify-center gap-8"
+              class="rounded-lg border-gray-200 flex flex-wrap items-center justify-center gap-8 mt-5 text-black"
             >
-              <li class="flex flex-col space-x-3 items-center justify-center w-64">
+              <div
+                class="flex flex-col items-center justify-center w-64 border rounded-lg px-2 bg-gray-50"
+              >
                 <!-- Icon -->
                 <img
                   src="./images/one.png"
                   class="flex-shrink-0 w-24 h-24 text-purple-500 dark:text-purple-400 mt-5"
                   alt=""
                 />
-                <div class="w-full">
+                <div class="w-full h-32">
                   <span
-                    class="text-base font-medium leading-tight text-gray-900 "
+                    style="font-size: 18px"
+                    class="leading-tight text-gray-900"
                     >Master In-Demand Skills
                   </span>
-                  <p class="font-light">
+                  <p
+                    style="font-size: 16px; color: black; line-height: 1.5"
+                    class="font-light text-center"
+                  >
                     Learn hot DevOps tools (Git, Jenkins, Docker, Kubernetes)
                     and CI/CD pipelines - hands-on!
                   </p>
                 </div>
-              </li>
+              </div>
 
-              <li class="flex flex-col space-x-3 items-center justify-center w-64">
+              <div
+                class="flex flex-col items-center justify-center w-64 border rounded-lg px-2 bg-gray-50"
+              >
                 <!-- Icon -->
                 <img
                   src="./images/two.png"
                   class="flex-shrink-0 w-24 h-24 text-purple-500 dark:text-purple-400 mt-5"
                   alt=""
                 />
-                <div>
+                <div div class="w-full h-32">
                   <span
-                    class="text-base font-medium leading-tight text-gray-900 dark:text-white"
+                    style="font-size: 18px"
+                    class="leading-tight text-gray-900"
                     >Personalized guidance
                   </span>
-                  <p class="font-light">
+                  <p
+                    style="font-size: 16px; color: black; line-height: 1.5"
+                    class="font-light text-center text-black"
+                  >
                     Get the support you need with our dedicated mentorship
                     program.
                   </p>
                 </div>
-              </li>
+              </div>
 
-              <li class="flex flex-col space-x-3 items-center justify-center w-64">
+              <div
+                class="flex flex-col items-center justify-center w-64 border rounded-lg px-2 bg-gray-50"
+              >
                 <!-- Icon -->
                 <img
                   src="./images/three.png"
                   class="flex-shrink-0 w-24 h-24 text-purple-500 dark:text-purple-400 mt-5"
                   alt=""
                 />
-                <div>
+                <div div class="w-full h-32">
                   <span
-                    class="text-base font-medium leading-tight text-gray-900 dark:text-white"
+                    style="font-size: 18px"
+                    class="leading-tight text-gray-900"
                     >Admin to DevOps Pro
                   </span>
-                  <p class="font-light">
+                  <p
+                    style="font-size: 16px; color: black; line-height: 1.5"
+                    class="font-light text-center text-black"
+                  >
                     This course bridges the gap for Linux & Cloud admins,
                     transforming you into a sought-after DevOps engineer.
                   </p>
                 </div>
-              </li>
+              </div>
 
-              <li class="flex flex-col space-x-3 items-center justify-center w-64">
+              <div
+                class="flex flex-col items-center justify-center w-64 border rounded-lg px-2 bg-gray-50"
+              >
                 <!-- Icon -->
                 <img
                   src="./images/four.png"
                   class="flex-shrink-0 w-24 h-24 text-purple-500 dark:text-purple-400 mt-5"
                   alt=""
                 />
-                <div>
+                <div div class="w-full h-32">
                   <span
-                    class="text-base font-medium leading-tight text-gray-900 dark:text-white"
+                    style="font-size: 18px"
+                    class="leading-tight text-gray-900"
                     >Real-World Ready
                   </span>
-                  <p class="font-light">
+                  <p
+                    style="font-size: 16px; color: black; line-height: 1.5"
+                    class="font-light text-center text-black"
+                  >
                     Nixace goes beyond theory. Solidify your skills with
                     practical projects to confidently tackle DevOps challenges.
                   </p>
                 </div>
-              </li>
+              </div>
 
-              <li class="flex flex-col space-x-3 items-center justify-center w-64">
+              <div
+                class="flex flex-col items-center justify-center w-64 border rounded-lg px-2 bg-gray-50"
+              >
                 <!-- Icon -->
                 <img
                   src="./images/five.png"
                   class="flex-shrink-0 w-24 h-24 text-purple-500 dark:text-purple-400 mt-5"
                   alt=""
                 />
-                <div>
+                <div div class="w-full h-32">
                   <span
-                    class="text-base font-medium leading-tight text-gray-900 dark:text-white"
+                    style="font-size: 18px"
+                    class="leading-tight text-gray-900"
                     >Interactive Training
                   </span>
-                  <p class="font-light">
+                  <p
+                    style="font-size: 16px; color: black; line-height: 1.5"
+                    class="font-light text-center text-black"
+                  >
                     Network with peers and learn from instructor-led sessions in
                     our engaging classroom environment.
                   </p>
                 </div>
-              </li>
+              </div>
 
-              <li class="flex flex-col space-x-3 items-center justify-center w-64">
+              <div
+                class="flex flex-col items-center justify-center w-64 border rounded-lg px-2 bg-gray-50"
+              >
                 <!-- Icon -->
                 <img
                   src="./images/six.png"
                   class="flex-shrink-0 w-24 h-24 text-purple-500 dark:text-purple-400 mt-5"
                   alt=""
                 />
-                <div>
+                <div div class="w-full h-32">
                   <span
-                    class="text-base font-medium leading-tight text-gray-900 dark:text-white"
+                    style="font-size: 18px"
+                    class="leading-tight text-gray-900"
                     >Expert Mentorship
                   </span>
-                  <p class="font-light">
+                  <p
+                    style="font-size: 16px; color: black; line-height: 1.5"
+                    class="font-light text-center text-black"
+                  >
                     Learn from DevOps veterans & get personalized guidance to
                     ensure your success.
                   </p>
                 </div>
-              </li>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Row -->
-        <!--             
-            <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-                <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="./images/mindmap.svg" alt="feature image 2">
-                <div class="text-gray-500 sm:text-lg dark:text-gray-400">
-                    <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">We invest in the world’s potential</h2>
-                    <p class="mb-8 font-light lg:text-xl">Our training program adopts a blended learning approach, combining instructor-led lectures, hands-on lab sessions, case studies, and interactive discussions to ensure a well-rounded learning experience.</p>
-                    
-                    <ul role="list" class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700">
-                        <li class="flex space-x-3">
-                            
-                            <img src="./images/yes.svg" class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"   alt="">
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Real-World Insights: Industry Best Practices</span>
-                        </li>
-                        <li class="flex space-x-3">
-                           
-                            <img src="./images/yes.svg" class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"   alt="">
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Hands-On Learning: Theory to Practice</span>
-                        </li>
-                        <li class="flex space-x-3">
-                          
-                            <img src="./images/yes.svg" class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"   alt="">
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Collaborative Projects: Teamwork in Action</span>
-                        </li>
-                        <li class="flex space-x-3">
-                            <img src="./images/yes.svg" class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"   alt="">
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Personalized Guidance: Instructor Support</span>
-                        </li>
-                        <li class="flex space-x-3">
-                            
-                            <img src="./images/yes.svg" class="flex-shrink-0 w-5 h-5 text-purple-500 dark:text-purple-400"   alt="">
-                            <span class="text-base font-medium leading-tight text-gray-900 dark:text-white">Practical Scenarios: Application-Oriented Exercises</span>
-                        </li>
-                    </ul>
-                   
-                </div>
-            </div>
-             -->
       </div>
     </section>
     <!-- why we choose section end -->
 
+    <!-- cta section start -->
+
+    <section
+      class="flex items-center bg-gray-900 justify-center flex-col text-center px-5 py-8 text-white"
+    >
+      <div class="mb-4 text-2xl font-bold tracking-tight">
+        Don't Wait! Start Your DevOps Journey with Nixace Now!
+      </div>
+
+      <a
+        class="font-bold text-2xl tracking-wider text-white px-8 hover:text-white bg-purple-700 py-2 mt-5 rounded-lg"
+        href="#About"
+      >
+        Enquire Now !
+      </a>
+    </section>
+
+    <!-- cta section end -->
+
     <!-- the course is perfect for -->
 
-    <section class="bg-gray-50">
+    <section class="bg-gray-50 lg:py-0">
       <div
-        class="items-center max-w-screen-xl px-5 pt-6 mx-auto lg:grid lg:grid-cols-4 lg:gap-16 lg:px-6 lg:pt-2"
+        class="items-center max-w-screen-xl px-5 mx-auto lg:grid lg:grid-cols-4 lg:gap-16 lg:px-6"
       >
         <div class="col-span-2 mb-8">
-          <h2
-            class="mt-3 mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
-          >
+          <h2 class="mt-3 mb-4 text-3xl font-bold tracking-tight text-black">
             This course is perfect for
           </h2>
           <div class="flex items-start justify-start gap-8 mt-2">
@@ -433,7 +576,7 @@
             </div>
           </div>
         </div>
-        <div class="col-span-2 space-y-8">
+        <div class="col-span-2">
           <img src="./images/devloper.png" class="w-full h-full" alt="" />
         </div>
       </div>
@@ -441,91 +584,29 @@
 
     <!-- the course is perfect for end -->
 
-    <!-- benefit of this course start -->
-
-    <section class="w-full max-w-screen-xl mx-auto px-5">
-      <div class="w-full px-8">
-        <div class="py-8 px-8">
-          <h1 class="mb-4 text-3xl font-bold tracking-tight text-gray-900">
-            Benefits of Taking Our DevOps Training Course
-          </h1>
-        </div>
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 rounded-lg px-32 border"
-        >
-          <div class="p-4 w-1/4 border-b md:border-0 lg:border-0">
-            <div class="flex items-center justify-center flex-col">
-              <img class="w-24 h-24" src="./images/money-bag.png" alt="" />
-            </div>
-            <div class="flex items-center justify-center flex-col">
-              <h3 class="py-2 text-base font-medium leading-tight text-gray-900">Increased earning potential</h3>
-              <p class="font-light text-center">
-                DevOps professionals are in high demand and command competitive
-                salaries.
-              </p>
-            </div>
-          </div>
-          <div class="p-4 border-b md:border-0 lg:border-0">
-            <div class="flex items-center justify-center flex-col">
-              <img class="w-24 h-24" src="./images/growth.png" alt="" />
-            </div>
-            <div class="flex items-center justify-center flex-col">
-              <h3 class="py-2 text-base font-medium leading-tight text-gray-900">Career advancement</h3>
-              <p class="font-light text-center">Enhance your resume and stand out from the competition.</p>
-            </div>
-          </div>
-          <div class="p-4 border-b md:border-0 lg:border-0">
-            <div class="flex items-center justify-center flex-col">
-              <img
-                class="w-24 h-24"
-                src="./images/time-management.png"
-                alt=""
-              />
-            </div>
-            <div class="flex items-center justify-center flex-col">
-              <h3 class="py-2 text-base font-medium leading-tight text-gray-900">Improved productivity</h3>
-              <p class="font-light text-center">Learn how to automate tasks and streamline workflows.</p>
-            </div>
-          </div>
-          <div class="p-4">
-            <div class="flex items-center justify-center flex-col">
-              <img class="w-24 h-24" src="./images/collaboration.png" alt="" />
-            </div>
-            <div class="flex items-center justify-center flex-col">
-              <h3 class="py-2 text-base font-medium leading-tight text-gray-900">Enhanced collaboration</h3>
-              <p class="font-light text-center">
-                Develop the skills to work effectively with development and
-                operations teams.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- benefit of this course end -->
-
     <!-- advantages section start-->
 
     <section class="w-full max-w-screen-xl mx-auto px-5">
       <div class="w-full">
         <div class="py-8">
           <h1
-            class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+            class="mb-4 text-3xl text-center font-bold tracking-tight text-black"
           >
             Nixace Technologies Advantage
           </h1>
         </div>
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 rounded-lg px-32 border"
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 rounded-lg border bg-gray-50"
         >
-          <div class="p-4 w-1/4 border-b md:border-0 lg:border-0">
+          <div class="p-4 border-b md:border-0 lg:border-0">
             <div class="flex items-center justify-center flex-col">
               <img class="w-24 h-24" src="./images/experience.png" alt="" />
             </div>
-            <div class="flex items-center justify-center flex-col">
-              <h3 class="py-2  text-base font-medium leading-tight text-gray-900">Proven track record of success</h3>
-              <p class="font-light text-center">
+            <div class="flex items-center justify-center flex-col mt-5">
+              <h3 class="text-xl font-medium tracking-tight text-black">
+                Proven track record of success
+              </h3>
+              <p class="font-light text-center mt-2">
                 We have helped hundreds of individuals launch successful careers
                 in DevOps.
               </p>
@@ -535,9 +616,11 @@
             <div class="flex items-center justify-center flex-col">
               <img class="w-24 h-24" src="./images/businessman.png" alt="" />
             </div>
-            <div class="flex items-center justify-center flex-col">
-              <h3 class="py-2 text-base font-medium leading-tight text-gray-900">Job placement assistance</h3>
-              <p class="font-light text-center">
+            <div class="flex items-center justify-center flex-col mt-5">
+              <h3 class="text-xl font-medium tracking-tight text-black">
+                Job placement assistance
+              </h3>
+              <p class="font-light text-center mt-2">
                 We provide guidance and support to help you land your dream job.
               </p>
             </div>
@@ -546,9 +629,13 @@
             <div class="flex items-center justify-center flex-col">
               <img class="w-24 h-24" src="./images/price-tag.png" alt="" />
             </div>
-            <div class="flex items-center justify-center flex-col">
-              <h3 class="py-2 text-base font-medium leading-tight text-gray-900">Affordable pricing</h3>
-              <p class="font-light text-center">Get the best value for your investment in DevOps training.</p>
+            <div class="flex items-center justify-center flex-col mt-5">
+              <h3 class="text-xl font-medium tracking-tight text-black">
+                Affordable pricing
+              </h3>
+              <p class="font-light text-center mt-2">
+                Get the best value for your investment in DevOps training.
+              </p>
             </div>
           </div>
         </div>
@@ -557,30 +644,26 @@
     <!-- advantages section end -->
 
     <!-- learning path section start -->
-    <section class="bg-gray-50">
-      <div
-        class="max-w-screen-xl px-4 my-8 mx-auto space-y-12 lg:space-y-20 lg:px-6"
-      >
-        <div class="container mx-auto py-8 md:py-0">
+    <section class="">
+      <div class="max-w-screen-xl px-4 my-8 mx-auto lg:px-6">
+        <div class="container mx-auto md:py-0">
           <h1
-            class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+            class="py-8 text-3xl text-center font-bold tracking-tight text-black"
           >
             Learning Path
           </h1>
-          <hr class="border my-6" />
+
           <div
             class="grid grid-cols-1 px-2 md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
             <div
-              class="flex flex-col p-6 text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+              class="flex flex-col p-6 text-gray-900 bg-gray-50 border rounded-lg shadow"
             >
-              <h2
-                class="mb-4 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
-              >
+              <h2 class="text-xl font-medium tracking-tight text-black mb-3">
                 Configuration Management with Ansible and Terraform
               </h2>
               <ul
-                class="list-disc pl-4 max-w-2xl font-light text-gray-500 text-xs dark:text-gray-400"
+                class="list-disc pl-4 max-w-2xl font-light text-black text-sm"
               >
                 <li>Explore Configuration Management principles</li>
                 <li>
@@ -595,15 +678,13 @@
             </div>
 
             <div
-              class="flex flex-col p-6 text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+              class="flex flex-col p-6 text-gray-900 bg-gray-50 border rounded-lg shadow"
             >
-              <h2
-                class="mb-4 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
-              >
+              <h2 class="text-xl font-medium tracking-tight text-black mb-3">
                 Docker Certified Associate Certification Training
               </h2>
               <ul
-                class="list-disc pl-4 max-w-2xl font-light text-gray-500 text-xs dark:text-gray-400"
+                class="list-disc pl-4 max-w-2xl font-light text-black text-sm"
               >
                 <li>Introduction to Docker and containerization</li>
                 <li>Image creation, management, and registry</li>
@@ -615,15 +696,13 @@
             </div>
 
             <div
-              class="flex flex-col p-6 md:p-0 text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+              class="flex flex-col p-6 text-gray-900 bg-gray-50 border rounded-lg shadow"
             >
-              <h2
-                class="mb-4 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
-              >
+              <h2 class="text-xl font-medium tracking-tight text-black mb-3">
                 Container Orchestration using Kubernetes
               </h2>
               <ul
-                class="list-disc pl-4 max-w-2xl font-light text-gray-500 text-xs dark:text-gray-400"
+                class="list-disc pl-4 max-w-2xl font-light text-black text-sm"
               >
                 <li>
                   Gain insights into Kubernetes architecture and components
@@ -639,15 +718,13 @@
             </div>
 
             <div
-              class="flex flex-col p-6 text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white"
+              class="flex flex-col p-6 text-gray-900 bg-gray-50 border rounded-lg shadow"
             >
-              <h2
-                class="mb-4 text-xl font-bold tracking-tight text-gray-900 dark:text-white"
-              >
+              <h2 class="text-xl font-medium tracking-tight text-black mb-3">
                 DevOps Capstone Project
               </h2>
               <ul
-                class="list-disc pl-4 max-w-2xl font-light text-gray-500 text-xs dark:text-gray-400"
+                class="list-disc pl-4 max-w-2xl font-light text-black text-sm"
               >
                 <li>
                   Apply your skills to real-world scenarios through hands-on
@@ -672,7 +749,7 @@
     <section class="mb-4">
       <div class="px-4 py-10 mx-auto lg:pb-16 mb-4">
         <h2
-          class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white text-center py-5"
+          class="mb-4 text-3xl font-bold tracking-tight text-black text-center py-5"
         >
           Tools And Platforms
         </h2>
@@ -826,15 +903,13 @@
     <!-- Start block -->
     <section class="bg-gray-50">
       <div
-        class="items-center max-w-screen-xl px-4 py-8 mx-auto lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-12 lg:px-6"
+        class="items-center max-w-screen-xl px-4 py-8 mx-auto lg:flex lg:gap-16 xl:gap-24 lg:px-6"
       >
         <div class="col-span-2 mb-8">
           <p class="text-lg font-medium text-purple-600 dark:text-purple-500">
             Don't miss this opportunity to take your career to the next level!
           </p>
-          <h2
-            class="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
-          >
+          <h2 class="mb-4 text-3xl font-bold tracking-tight text-black">
             Contact Nixace Technologies today to enroll in our DevOps training
             course in Mumbai.
           </h2>
@@ -846,29 +921,25 @@
           >
             <div>
               <a
+                class="font-bold text-xl tracking-wider text-white px-8 hover:text-white bg-purple-700 py-2 mt-5 rounded-lg"
                 href="#About"
-                class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-gray-900 border border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
               >
-                Enroll Now!
-
-                <img src="./images/arrow.svg" class="w-5 h-5 ml-1" alt="" />
+                Enquire Now !
               </a>
             </div>
 
             <div>
               <a
                 href="#"
-                class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-gray-900 border border-gray-200 rounded-lg sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+                class="inline-flex items-center justify-center w-full px-5 py-3 text-xl font-med tracking-wider text-white border border-gray-200 rounded-lg sm:w-auto bg-purple-700 focus:ring-4"
               >
                 Download our Free DevOps Course Brochure
-
-                <img src="./images/arrow.svg" class="w-5 h-5 ml-1" alt="" />
               </a>
             </div>
           </div>
         </div>
-        <div class="col-span-2 space-y-8">
-          <img src="./images/anounce.png" class="w-full h-full" alt="" />
+        <div class="flex items-center justify-center w-full">
+          <img src="./images/anounce.png" class="w-96" alt="" />
         </div>
       </div>
     </section>
@@ -879,9 +950,7 @@
 
     <!-- contact us section start -->
     <section class="py-8 lg:py-16" id="About">
-      <h2
-        class="mb-8 text-3xl font-bold tracking-tight text-gray-900 dark:text-white text-center"
-      >
+      <h2 class="mb-8 text-3xl font-bold tracking-tight text-black text-center">
         Enquire Now!
       </h2>
       <div
@@ -940,7 +1009,7 @@
 
     <footer
       id="#About"
-      class="bg-gray-100 rounded-lg shadow dark:bg-gray-900 m-4"
+      class="bg-gray-100 rounded-t-lg shadow dark:bg-gray-900"
     >
       <div class="w-full max-w-screen-xl mx-auto">
         <div
@@ -989,7 +1058,59 @@
         </div>
       </div>
     </footer>
+    <!-- <div
+      class="fixed w-64 mx-auto inset-0 flex items-center justify-center  bg-opacity-50"
+      id="popup"
+    >
+      <div
+        class="w-full flex flex-col items-start justify-start bg-gray-200 p-6 rounded-lg"
+      >
+        <div class="flex items-center justify-between w-full py-2">
+          <h2 class="font-bold">Enquire Now!</h2>
+          <div
+            onclick="togglePopup()"
+            class="bg-gray-900 p-1 rounded-lg cursor-pointer"
+          >
+            <i class="fa-solid text-white fa-xmark fa-xl"></i>
+          </div>
+        </div>
+        <input
+          type="text"
+          id="Name"
+          aria-describedby="helper-text-explanation"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Full Name"
+        />
+
+        <input
+          type="email"
+          id="email"
+          aria-describedby="helper-text-explanation"
+          class="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Email"
+        />
+
+        <input
+          type="text"
+          id="Name"
+          aria-describedby="helper-text-explanation"
+          class="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          placeholder="Mobile Number"
+        />
+        <div
+          class="mt-2 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800 lg:mb-0"
+        >
+          Submit
+        </div>
+      </div>
+    </div> -->
 
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+    <script>
+      // function togglePopup() {
+      //   var popup = document.getElementById("popup");
+      //   popup.classList.toggle("hidden");
+      // }
+    </script>
   </body>
 </html>
