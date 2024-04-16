@@ -36,6 +36,7 @@
       src="https://kit.fontawesome.com/c771fd62ca.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
       #popup {
         display: none;
@@ -48,8 +49,6 @@
       .popup-content {
         width: 300px;
       }
-    </style>
-    <style>
       #overlay {
         display: none;
         position: fixed;
@@ -1049,7 +1048,8 @@
     </footer>
     <div id="popup" class="">
       <div class="popup-content">
-        <div
+        <form
+          id="contactForm"
           class="w-full flex flex-col items-center justify-center bg-gray-200 p-6 rounded-lg"
         >
           <div class="flex items-center justify-between w-full py-2">
@@ -1063,37 +1063,45 @@
           </div>
           <input
             type="text"
-            id="Name"
+            id="name"
+            name="name"
             aria-describedby="helper-text-explanation"
             class="bg-white text-gray-900 text-sm rounded-lg block w-full p-2.5 outline-none"
             placeholder="Full Name"
+            required
           />
 
           <input
             type="email"
             id="email"
+            name="email"
             aria-describedby="helper-text-explanation"
             class="mt-4 bg-white text-gray-900 text-sm rounded-lg block w-full p-2.5 outline-none"
             placeholder="Email"
+            required
           />
 
           <input
             type="text"
-            id="Name"
+            id="phone"
+            name="phone"
             aria-describedby="helper-text-explanation"
             class="mt-4 bg-white text-gray-900 text-sm rounded-lg block w-full p-2.5 outline-none"
             placeholder="Mobile Number"
+            required
           />
-          <div
+          <input
             class="mt-4 text-white cursor-pointer bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-10 py-2.5 mr-2 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800 lg:mb-0"
-          >
-            Submit
-          </div>
-        </div>
+            type="submit"
+            value="Submit"
+            onclick="sendEmail(); reset(); return false;"
+          />
+        </form>
       </div>
     </div>
     <div id="overlay"></div>
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
       function togglePopup() {
         var popup = document.getElementById("popup");
@@ -1112,6 +1120,90 @@
         var whySection = document.getElementById("why_section");
         whySection.scrollIntoView({ behavior: "smooth" });
       }
+
+      function sendEmail() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+
+        const bodyMsg = `Hello,<br>A new inquiry has been submitted,<br>Name: ${name}<br>Email: ${email}<br>Phone: ${phone}<br><br>Please follow up with the sender as soon as possible to address their inquiry.<br><br>Best regards,`;
+
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "poxej38978@kravify.com",
+          Password: "6DC59636BB68271C84AC4B29AC6A989BEDAB",
+          // To: "poxej38978@kravify.com",
+          To: "poxej38978@kravify.com, sinss.durgesh@gmail.com, sinss.shivam@gmail.com",
+          From: "poxej38978@kravify.com",
+          Subject: `New Admission Enquiry received from ${name}`,
+          Body: bodyMsg,
+        })
+          .then((message) => {
+            if (message == "OK") {
+              Swal.fire({
+                icon: "success",
+                title: "success!",
+                text: "Message Sent Successfully",
+              });
+              togglePopup();
+              console.log("message sent successfully");
+            }
+          })
+          .catch((error) => {
+            console.error("Error sending message:", error);
+          });
+      }
+
+      const contactForm = document.getElementById("contactForm");
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        sendEmail();
+      });
+      // send data to sheet
+
+      let link = `https://script.google.com/macros/s/AKfycbzUTs0KQk8wkA67Z7DcmAUtRQdlP2GiSsJBz9Zu9ELh7AY9pHPkqP4lV7iG4xqvlQpE/exec`;
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          var formData = new FormData(this);
+          console.log("formdata", formData);
+          var keyValuePairs = [];
+          for (var pair of formData.entries()) {
+            keyValuePairs.push(pair[0] + "=" + pair[1]);
+          }
+
+          var formDataString = keyValuePairs.join("&");
+
+          // Send a POST request to your Google Apps Script
+          fetch(link, {
+            redirect: "follow",
+            method: "POST",
+            body: formDataString,
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+          })
+            .then(function (response) {
+              // Check if the request was successful
+              console.log(response);
+              if (response) {
+                console.log(response);
+                return response; // Assuming your script returns JSON response
+              } else {
+                throw new Error("Failed to submit the form.");
+              }
+            })
+            .then(function (data) {
+              console.log("message sent successfully", data);
+              document.getElementById("form").reset();
+            })
+            .catch(function (error) {
+              // Handle errors, you can display an error message here
+              console.error(error);
+            });
+        });
     </script>
   </body>
 </html>
