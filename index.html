@@ -150,13 +150,21 @@
               </li>
             </ul>
           </div> -->
-          <div>
+          <div class="hidden md:block lg:block">
             <a
               onclick="togglePopup()"
-              class="inline-flex cursor-pointer items-center justify-center w-full px-5 py-3 text-sm font-medium text-center bg-purple-600 text-black hover:border  rounded-lg sm:w-auto hover:bg-purple-900 transition ease-in hover:text-white focus:ring-4 focus:ring-gray-100"
+              class="inline-flex cursor-pointer items-center justify-center w-full px-5 py-3 text-sm font-medium text-center bg-purple-600 text-black hover:border rounded-lg sm:w-auto hover:bg-purple-900 transition ease-in hover:text-white focus:ring-4 focus:ring-gray-100"
             >
               Enquire Now! <i class="fa-solid fa-right-to-bracket px-2"></i>
             </a>
+          </div>
+          <div class="block md:hidden lg:hidden">
+            <img
+              onclick="togglePopup()"
+              src="./images/chat.png"
+              class="w-12 h-12 cursor-pointer"
+              alt=""
+            />
           </div>
         </div>
       </nav>
