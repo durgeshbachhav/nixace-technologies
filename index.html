@@ -43,12 +43,27 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 9999; /* Ensure the popup appears above other content */
+        z-index: 9999;
       }
-
-      /* Styles for the popup content */
       .popup-content {
         width: 300px;
+      }
+    </style>
+    <style>
+      #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.6
+        ); /* Adjust opacity for desired blur effect */
+        z-index: 999; /* Ensure the overlay is above other elements */
       }
     </style>
   </head>
@@ -59,7 +74,7 @@
           class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto"
         >
           <a href="#" class="flex items-center">
-            <img src="./images/logo.svg" class="w-24 h-24 mr-3" alt=" Logo" />
+            <img src="./images/logo2.png" class="w-full h-24" alt=" Logo" />
           </a>
           <!-- <div class="flex items-center lg:order-2">
             <button
@@ -138,7 +153,7 @@
           <div>
             <a
               onclick="togglePopup()"
-              class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center bg-purple-600 text-black border border-gray-200 rounded-lg sm:w-auto hover:bg-purple-900 transition ease-in hover:text-white focus:ring-4 focus:ring-gray-100"
+              class="inline-flex cursor-pointer items-center justify-center w-full px-5 py-3 text-sm font-medium text-center bg-purple-600 text-black hover:border  rounded-lg sm:w-auto hover:bg-purple-900 transition ease-in hover:text-white focus:ring-4 focus:ring-gray-100"
             >
               Enquire Now! <i class="fa-solid fa-right-to-bracket px-2"></i>
             </a>
@@ -180,7 +195,7 @@
           >
             <a
               onclick="togglePopup()"
-              class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center bg-purple-600 text-black border border-gray-200 rounded-lg sm:w-auto hover:bg-purple-900 transition ease-in hover:text-white focus:ring-4 focus:ring-gray-100"
+              class="inline-flex cursor-pointer items-center justify-center w-full px-5 py-3 text-sm font-medium text-center bg-purple-600 text-black border border-gray-200 rounded-lg sm:w-auto hover:bg-purple-900 transition ease-in hover:text-white focus:ring-4 focus:ring-gray-100"
             >
               Enquire Now! <i class="fa-solid fa-right-to-bracket px-2"></i>
             </a>
@@ -221,7 +236,7 @@
               Join Nixace and transform your Career.
             </p>
             <a
-              class="font-bold text-2xl tracking-wider text-white px-8 hover:text-white bg-purple-700 py-2 rounded-lg"
+              class="font-bold cursor-pointer text-2xl tracking-wider text-white px-8 hover:text-white bg-purple-700 py-2 rounded-lg"
               onclick="togglePopup()"
             >
               Enroll Today!
@@ -268,7 +283,7 @@
 
     <!-- benefit of this course start -->
 
-    <section class="w-full max-w-screen-xl mx-auto px-5">
+    <section class="w-full bg-white max-w-screen-xl mx-auto px-5">
       <div class="w-full px-8">
         <div class="py-8">
           <h1
@@ -538,7 +553,7 @@
 
       <a
         onclick="togglePopup()"
-        class="font-bold text-2xl tracking-wider text-white px-8 hover:text-white bg-purple-700 py-2 mt-5 rounded-lg"
+        class="font-bold cursor-pointer text-2xl tracking-wider text-white px-8 hover:text-white bg-purple-700 py-2 mt-5 rounded-lg"
       >
         Enquire Now !
       </a>
@@ -767,7 +782,7 @@
     <!-- course -->
 
     <!-- tool section start -->
-    <section class="mb-4">
+    <section class="mb-4 max-w-screen-xl mx-auto">
       <div class="px-4 py-10 mx-auto lg:pb-16 mb-4">
         <h2
           class="mb-4 text-3xl font-bold tracking-tight text-black text-center py-5"
@@ -970,47 +985,6 @@
     <!-- dont miss the opportunity -->
 
     <!-- contact us section start -->
-    <section class="py-8 lg:py-16" id="About">
-      <h2 class="mb-8 text-3xl font-bold tracking-tight text-black text-center">
-        Enquire Now!
-      </h2>
-      <div
-        class="max-w-80 px-4 mx-auto lg:px-6  gap-8"
-      >
-        <div
-          class="w-full flex flex-col items-start justify-start bg-gray-200 p-6 rounded-lg"
-        >
-          <input
-            type="text"
-            id="Name"
-            aria-describedby="helper-text-explanation"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Full Name"
-          />
-
-          <input
-            type="email"
-            id="email"
-            aria-describedby="helper-text-explanation"
-            class="mt-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Email"
-          />
-
-          <input
-            type="text"
-            id="Name"
-            aria-describedby="helper-text-explanation"
-            class="mt-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Mobile Number"
-          />
-          <div
-            class="mt-4    text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800 lg:mb-0"
-          >
-            Submit
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- contact us section end -->
 
@@ -1027,8 +1001,8 @@
             class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
             <img
-              src="./images/logo.svg"
-              class="h-20 w-20"
+              src="./images/logo2.png"
+              class="w-full h-24"
               alt="Flowbite Logo"
             />
           </a>
@@ -1083,7 +1057,7 @@
             type="text"
             id="Name"
             aria-describedby="helper-text-explanation"
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            class="bg-white text-gray-900 text-sm rounded-lg block w-full p-2.5 outline-none"
             placeholder="Full Name"
           />
 
@@ -1091,7 +1065,7 @@
             type="email"
             id="email"
             aria-describedby="helper-text-explanation"
-            class="mt-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            class="mt-4 bg-white text-gray-900 text-sm rounded-lg block w-full p-2.5 outline-none"
             placeholder="Email"
           />
 
@@ -1099,30 +1073,33 @@
             type="text"
             id="Name"
             aria-describedby="helper-text-explanation"
-            class="mt-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            class="mt-4 bg-white text-gray-900 text-sm rounded-lg block w-full p-2.5 outline-none"
             placeholder="Mobile Number"
           />
           <div
-            class="mt-4 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800 lg:mb-0"
+            class="mt-4 text-white cursor-pointer bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-10 py-2.5 mr-2 dark:bg-purple-600 dark:hover:bg-purple-700 focus:outline-none dark:focus:ring-purple-800 lg:mb-0"
           >
             Submit
           </div>
         </div>
       </div>
     </div>
-
+    <div id="overlay"></div>
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
     <script>
       function togglePopup() {
         var popup = document.getElementById("popup");
+        var overlay = document.getElementById("overlay");
+
         if (popup.style.display === "none") {
           popup.style.display = "block"; // Show the popup
+          overlay.style.display = "block"; // Show the overlay
         } else {
           popup.style.display = "none"; // Hide the popup
+          overlay.style.display = "none"; // Hide the overlay
         }
-        ("popup");
-        popup.classList.add("hidden");
       }
+
       function scrollToWhy() {
         var whySection = document.getElementById("why_section");
         whySection.scrollIntoView({ behavior: "smooth" });
