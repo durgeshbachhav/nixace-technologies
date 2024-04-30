@@ -152,7 +152,7 @@
           <div class="hidden md:block lg:block">
             <a
               onclick="togglePopup()"
-              class="inline-flex cursor-pointer items-center justify-center w-full px-5 py-3 text-sm font-medium text-center bg-purple-600 text-black hover:border rounded-lg sm:w-auto hover:bg-purple-900 transition ease-in hover:text-white focus:ring-4 focus:ring-gray-100"
+              class="inline-flex cursor-pointer items-center justify-center w-full px-5 py-3 text-sm font-medium text-center bg-purple-600 text-white hover:border rounded-lg sm:w-auto hover:bg-purple-900 transition ease-in hover:text-white focus:ring-4 focus:ring-gray-100"
             >
               Enquire Now! <i class="fa-solid fa-right-to-bracket px-2"></i>
             </a>
@@ -170,7 +170,7 @@
     </header>
     <section class="fixed bottom-2 right-2 md:hidden lg:hidden">
       <a
-        class="inline-flex cursor-pointer items-center justify-center w-full px-5 py-3 text-sm font-medium text-center bg-purple-600 text-black border border-gray-200 rounded-lg sm:w-auto hover:bg-purple-900 transition ease-in hover:text-white focus:ring-4 focus:ring-gray-100"
+        class="inline-flex cursor-pointer items-center justify-center w-full px-5 py-3 text-sm font-medium text-center bg-purple-600 border border-gray-200 rounded-lg sm:w-auto hover:bg-purple-900 transition ease-in hover:text-white focus:ring-4 focus:ring-gray-100"
         onclick="togglePopup()"
         >Enquire Now!</a
       >
@@ -202,7 +202,7 @@
           >
             <a
               onclick="togglePopup()"
-              class="inline-flex cursor-pointer items-center justify-center w-full px-5 py-3 text-sm font-medium text-center bg-purple-600 text-black border border-gray-200 rounded-lg sm:w-auto hover:bg-purple-900 transition ease-in hover:text-white focus:ring-4 focus:ring-gray-100"
+              class="inline-flex cursor-pointer items-center justify-center w-full px-5 py-3 text-sm font-medium text-center bg-purple-600 text-white border border-gray-200 rounded-lg sm:w-auto hover:bg-purple-900 transition ease-in hover:text-white focus:ring-4 focus:ring-gray-100"
             >
               Enquire Now! <i class="fa-solid fa-right-to-bracket px-2"></i>
             </a>
@@ -1050,10 +1050,12 @@
       <div class="popup-content">
         <form
           id="contactForm"
+          action="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZhMDYzNDA0MzU1MjY1NTUzMzUxMzMi_pc"
+          method="post"
           class="w-full flex flex-col items-center justify-center bg-gray-200 p-6 rounded-lg"
         >
           <div class="flex items-center justify-between w-full py-2">
-            <h2 class="font-bold">Enquire Now!</h2>
+            <h2 class="font-bold text-white">Enquire Now!</h2>
             <div
               onclick="togglePopup()"
               class="bg-gray-900 p-1 rounded-lg cursor-pointer"
@@ -1116,11 +1118,6 @@
         }
       }
 
-      function scrollToWhy() {
-        var whySection = document.getElementById("why_section");
-        whySection.scrollIntoView({ behavior: "smooth" });
-      }
-
       function sendEmail() {
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
@@ -1130,27 +1127,52 @@
 
         Email.send({
           Host: "smtp.elasticemail.com",
-          Username: "poxej38978@kravify.com",
+          Username: "sinss.durgesh@gmail.com",
           Password: "6DC59636BB68271C84AC4B29AC6A989BEDAB",
-          // To: "poxej38978@kravify.com",
-          To: "poxej38978@kravify.com, sinss.durgesh@gmail.com, sinss.shivam@gmail.com",
-          From: "poxej38978@kravify.com",
+          To: "sinss.durgesh@gmail.com",
+          From: "sinss.durgesh@gmail.com",
           Subject: `New Admission Enquiry received from ${name}`,
           Body: bodyMsg,
         })
           .then((message) => {
-            if (message == "OK") {
+            if (message === "OK") {
               Swal.fire({
                 icon: "success",
-                title: "success!",
+                title: "Success!",
                 text: "Message Sent Successfully",
               });
-              togglePopup();
-              console.log("message sent successfully");
+              console.log("Message sent successfully");
+              sendToWebhook(name, email, phone); // Call the function to send data to webhook
+              togglePopup(); // Hide the popup
+            } else {
+              console.error("Error sending message:", message);
             }
           })
           .catch((error) => {
             console.error("Error sending message:", error);
+          });
+      }
+
+      function sendToWebhook(name, email, phone) {
+        let webhookURL =
+          "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZhMDYzNDA0MzY1MjZkNTUzMTUxM2Ei_pc";
+
+        fetch(webhookURL, {
+          method: "POST",
+          body: JSON.stringify({ name, email, phone }), // Convert form data to JSON string
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              console.log("Form data sent to webhook successfully");
+            } else {
+              throw new Error("Failed to send form data to webhook");
+            }
+          })
+          .catch((error) => {
+            console.error(error);
           });
       }
 
@@ -1159,51 +1181,6 @@
         e.preventDefault();
         sendEmail();
       });
-      // send data to sheet
-
-      let link = `https://script.google.com/macros/s/AKfycbzUTs0KQk8wkA67Z7DcmAUtRQdlP2GiSsJBz9Zu9ELh7AY9pHPkqP4lV7iG4xqvlQpE/exec`;
-
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-          var formData = new FormData(this);
-          console.log("formdata", formData);
-          var keyValuePairs = [];
-          for (var pair of formData.entries()) {
-            keyValuePairs.push(pair[0] + "=" + pair[1]);
-          }
-
-          var formDataString = keyValuePairs.join("&");
-
-          // Send a POST request to your Google Apps Script
-          fetch(link, {
-            redirect: "follow",
-            method: "POST",
-            body: formDataString,
-            headers: {
-              "Content-Type": "text/plain;charset=utf-8",
-            },
-          })
-            .then(function (response) {
-              // Check if the request was successful
-              console.log(response);
-              if (response) {
-                console.log(response);
-                return response; // Assuming your script returns JSON response
-              } else {
-                throw new Error("Failed to submit the form.");
-              }
-            })
-            .then(function (data) {
-              console.log("message sent successfully", data);
-              document.getElementById("form").reset();
-            })
-            .catch(function (error) {
-              // Handle errors, you can display an error message here
-              console.error(error);
-            });
-        });
     </script>
   </body>
 </html>
